@@ -6,7 +6,7 @@ export const metadata = {
   keywords: ['developer cheatsheet', 'javascript cheatsheet', 'python cheatsheet', 'css reference', 'git commands', 'react hooks', 'coding quick reference', 'programming guide'],
   authors: [{ name: 'DevCheatsheet' }],
   other: {
-    'google-site-verification': 'google27fcd6f303a9589c'
+    'google-adsense-account': 'ca-pub-7322019754286753'
   },
   robots: {
     index: true,
