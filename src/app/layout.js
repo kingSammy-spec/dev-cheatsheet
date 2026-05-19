@@ -1,11 +1,13 @@
 import Script from 'next/script';
-import type { Metadata } from 'next';
 
 export const metadata = {
   title: 'DevCheatsheet | Quick Reference Guides for Developers',
   description: 'Instant access to cheatsheets for JavaScript, Python, CSS, Git, React, and more. The go-to quick reference hub for developers of all levels.',
   keywords: ['developer cheatsheet', 'javascript cheatsheet', 'python cheatsheet', 'css reference', 'git commands', 'react hooks', 'coding quick reference', 'programming guide'],
   authors: [{ name: 'DevCheatsheet' }],
+  verification: {
+    google: 'google27fcd6f303a9589c'
+  },
   robots: {
     index: true,
     follow: true,
