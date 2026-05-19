@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;800&display=swap');
+
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --accent: #58a6ff;
+  --text: #c9d1d9;
+  --code-bg: #010409;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+.container { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; }
+
+header { margin-bottom: 4rem; }
+.logo { font-size: 2rem; font-weight: 800; color: #fff; font-family: 'Fira Code', monospace; }
+
+.search-wrap { margin-bottom: 4rem; }
+.search-bar {
+  width: 100%;
+  padding: 1.2rem;
+  background: var(--code-bg);
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+}
+
+.snippet-card {
+  background: var(--card);
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.snippet-header {
+  padding: 1rem 1.5rem;
+  background: rgba(255,255,255,0.03);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lang-tag {
+  background: rgba(88, 166, 255, 0.1);
+  color: var(--accent);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.snippet-body {
+  padding: 1.5rem;
+  background: var(--code-bg);
+  overflow-x: auto;
+}
+
+code { font-family: 'Fira Code', monospace; font-size: 0.9rem; color: #79c0ff; }
+
+.dev-ad-bar {
+  background: #1c2128;
+  border: 1px dashed #444;
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.ad-label { font-size: 0.6rem; color: #444; letter-spacing: 2px; margin-bottom: 0.5rem; display: block; }
+.ad-content { color: #fff; font-weight: 600; }
+
+.pagination { display: flex; justify-content: center; align-items: center; gap: 2rem; margin: 4rem 0; }
+.pagination button { background: #21262d; border: 1px solid #30363d; color: #fff; padding: 0.6rem 1.5rem; border-radius: 6px; cursor: pointer; }
+.pagination button:hover { background: #30363d; }
+
+.dev-footer { margin-top: 8rem; border-top: 1px solid #30363d; padding-top: 4rem; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; }
+.footer-brand { font-family: 'Fira Code', monospace; font-size: 2rem; color: var(--accent); }
+.footer-col h4 { font-size: 0.8rem; text-transform: uppercase; margin-bottom: 1.5rem; color: #fff; }
+.footer-col a { display: block; color: #8b949e; text-decoration: none; margin-bottom: 0.8rem; font-size: 0.9rem; }
+.footer-col a:hover { color: var(--accent); }
+.footer-bottom { border-top: 1px solid #21262d; margin-top: 4rem; padding: 2rem 0; text-align: center; color: #484f58; font-size: 0.8rem; }
+.footer-bottom a { margin-left: 1rem; color: #484f58; }
+
+.burger-btn { display: block; background: none; border: none; font-size: 2rem; cursor: pointer; color: #fff; }
+.nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--card); flex-direction: column; padding: 2rem 1rem; border: 1px solid #30363d; z-index: 100; gap: 1rem !important; margin-top: 1rem; }
+.nav-links.open { display: flex; }
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Mobile Phones */
+@media (max-width: 767px) {
+  .container { padding: 2rem 1rem; }
+  .desktop-only { display: none; }
+  header { flex-direction: column; align-items: flex-start !important; gap: 1rem; }
+  .logo { font-size: 1.8rem; }
+  .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .modal-content { padding: 1.5rem !important; width: 95% !important; }
+  .modal-content h2 { font-size: 1.5rem !important; }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* TV / Ultra-Wide */
+@media (min-width: 1600px) {
+  .container { max-width: 1400px; }
+  body { font-size: 1.2rem; }
+  .snippet-card { border-width: 2px; }
+}
+
