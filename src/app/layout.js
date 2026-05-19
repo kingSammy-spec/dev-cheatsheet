@@ -1,4 +1,5 @@
 export const metadata = {
+import Script from 'next/script';
   title: 'DevCheatsheet | Quick Reference Guides for Developers',
   description: 'Instant access to cheatsheets for JavaScript, Python, CSS, Git, React, and more. The go-to quick reference hub for developers of all levels.',
   keywords: ['developer cheatsheet', 'javascript cheatsheet', 'python cheatsheet', 'css reference', 'git commands', 'react hooks', 'coding quick reference', 'programming guide'],
@@ -30,7 +31,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>{children}      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7322019754286753"
+        crossOrigin="anonymous"
+        strategy="afterInteractive"
+      />
+      </body>
     </html>
   )
 }
