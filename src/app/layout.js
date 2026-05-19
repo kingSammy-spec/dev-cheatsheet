@@ -1,4 +1,5 @@
 import Script from 'next/script';
+import type { Metadata } from 'next';
 
 export const metadata = {
   title: 'DevCheatsheet | Quick Reference Guides for Developers',
